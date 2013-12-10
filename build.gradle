@@ -25,12 +25,20 @@ project(':Launcher') {
     }
 }
 
-task cleanAll() {
+task clean() {
     dependsOn subprojects.clean
 }
 
-task buildAll() {
+task build() {
     dependsOn subprojects.build
 }
 
-defaultTasks = ['cleanAll', 'buildAll']
+task test() {
+    dependsOn subprojects.test
+}
+
+task check() {
+    dependsOn subprojects.check
+}
+
+defaultTasks = ['check']
