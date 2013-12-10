@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        maven {
+            name 'Shadow'
+            url 'http://dl.bintray.com/content/johnrengelman/gradle-plugins'
+        }
+    }
+    dependencies {
+        classpath 'org.gradle.plugins:shadow:0.7.4'
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'shadow'
+
+    group = 'org.magetech.paq'
+    version = '1.0.0'
+    sourceCompatibility = 1.7
+}
+
+project(':Launcher') {
+    dependencies {
+        compile project(':Common')
+    }
+}
+
+task cleanAll() {
+    dependsOn subprojects.clean
+}
+
+task buildAll() {
+    dependsOn subprojects.build
+}
+
+defaultTasks = ['cleanAll', 'buildAll']

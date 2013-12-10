@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'res'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.13'
+    compile group: 'com.github.zafarkhaja', name: 'java-semver', version: '0.7.1'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    compile group: 'org.tinylog', name: 'tinylog', version: '0.8.1'
+}
