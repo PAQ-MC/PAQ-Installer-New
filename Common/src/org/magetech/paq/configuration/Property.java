@@ -9,6 +9,7 @@ public class Property {
 
     public static final String INSTALLER_REPOSITORY = "installer.repository";
     public static final String INSTALLER_MOD_REPOSITORY = "installer.modrepository";
+    public static final String INSTALLER_FORGE_INFO_URL = "installer.forge";
 
     public static final String DATA_ID = "data.id";
     public static final String DATA_DIR = "data.dir";

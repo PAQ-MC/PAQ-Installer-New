@@ -2,6 +2,7 @@ package org.magetech.paq.launcher;
 
 import com.github.zafarkhaja.semver.Version;
 import org.apache.commons.io.FilenameUtils;
+import org.magetech.paq.Launch;
 import org.magetech.paq.launcher.data.Repository;
 import org.magetech.paq.launcher.repository.IPackage;
 import org.yaml.snakeyaml.Yaml;
@@ -95,20 +96,7 @@ public class DefaultLaunchSystem implements ILaunchSystem {
     @Override
     public void launch(String appId, Version version) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         File jar = new File(getAppPath(appId, version));
-        URLClassLoader child = new URLClassLoader(new URL[] {jar.toURL()}, getClass().getClassLoader());
-        String mainClassName = null;
-        try(InputStream is = child.getResourceAsStream("META-INF/MANIFEST.MF")) {
-            Properties p = new Properties();
-            p.load(is);
-            mainClassName = p.getProperty("Main-Class");
-        }
-
-        if(mainClassName == null)
-            throw new IllegalStateException("No main class found in manifest");
-
-        Class<?> mainClass = Class.forName(mainClassName, true, child);
-        Method method = mainClass.getDeclaredMethod("main", String[].class);
-        method.invoke(null);
+        Launch.jar(jar, new String[0]);
     }
 
     private static Repository loadRepository(String dir) throws IOException {

@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -115,7 +116,7 @@ public class Installer {
         }
     }
 
-    public void install(String pack) throws IOException {
+    public void install(String pack, boolean isServer) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         updateRepos();
         PackRepository packsRepo;
         ModRepository modRepo;
@@ -151,6 +152,8 @@ public class Installer {
             mods.add(m);
             download(m);
         }
+
+        ForgeInstaller.install(isServer);
 
         for(ModRepository.ModConfig mod : mods) {
             // TODO: "Install" mod
