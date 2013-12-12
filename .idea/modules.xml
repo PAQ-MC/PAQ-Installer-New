@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/Common/Common.iml" filepath="$PROJECT_DIR$/Common/Common.iml" />
       <module fileurl="file://$PROJECT_DIR$/CommonInstaller/CommonInstaller.iml" filepath="$PROJECT_DIR$/CommonInstaller/CommonInstaller.iml" />
       <module fileurl="file://$PROJECT_DIR$/Launcher/Launcher.iml" filepath="$PROJECT_DIR$/Launcher/Launcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PAQ.iml" filepath="$PROJECT_DIR$/PAQ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PAQ.iml" filepath="$PROJECT_DIR$/PAQ.iml" />
     </modules>
   </component>
 </project>

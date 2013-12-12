@@ -42,21 +42,4 @@ public class RepositoryUpdateSystem implements IUpdateSystem {
 
         return null;
     }
-
-//    @Override
-//    public IUpdater checkForUpdates() throws IOException {
-//        List<IPackage> packages = _repository.getPackages();
-//        IPackage pack = null;
-//        for(IPackage p : packages) {
-//            if(p.getId().equals(_id)) {
-//                pack = p;
-//                break;
-//            }
-//        }
-//
-//        if(pack == null)
-//            throw new IllegalStateException("Package with id " + _id + " not found in repository");
-//
-//        return new Updater(pack, _id, _version);
-//    }
 }

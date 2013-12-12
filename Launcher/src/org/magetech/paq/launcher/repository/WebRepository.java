@@ -4,6 +4,7 @@ import com.github.zafarkhaja.semver.Version;
 import org.apache.commons.io.FilenameUtils;
 import org.magetech.paq.Assert;
 import org.magetech.paq.Out;
+import org.magetech.paq.StreamUtils;
 import org.magetech.paq.launcher.data.Repository;
 
 import java.io.*;
@@ -87,26 +88,14 @@ public class WebRepository implements IRepository {
         }
 
         @Override
-        public void copyTo(Version version, File tmp) throws IOException {
+        public void copyTo(Version version, File file) throws IOException {
             String path = _url.getPath();
             int separatorIndex = FilenameUtils.indexOfLastSeparator(path);
             path = path.substring(0, separatorIndex + 1) + _id + "/" +  _id + "-" + version + ".jar";
             URL url = new URL(_url.getProtocol(), _url.getHost(), _url.getPort(), path);
 
-            try(InputStream in = url.openStream();
-                OutputStream out = new FileOutputStream(tmp)) {
-                byte[] buffer = new byte[4096];
-                while(true) {
-                    int read = in.read(buffer, 0, 4096);
-                    if(read <= 0) {
-                        out.flush();
-                        in.close();
-                        out.close();
-                        break;
-                    }
-
-                    out.write(buffer, 0, read);
-                }
+            try(InputStream in = url.openStream()) {
+                StreamUtils.saveTo(in, file);
             }
         }
     }

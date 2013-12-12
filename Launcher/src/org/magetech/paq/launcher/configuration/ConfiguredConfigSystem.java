@@ -1,6 +1,8 @@
 package org.magetech.paq.launcher.configuration;
 
 import org.magetech.paq.Assert;
+import org.magetech.paq.configuration.Property;
+import org.magetech.paq.configuration.PropertyLoader;
 import org.magetech.paq.launcher.IConfigSystem;
 import org.magetech.paq.launcher.repository.IRepository;
 
@@ -34,7 +36,7 @@ public class ConfiguredConfigSystem implements IConfigSystem {
 
     public static IConfigSystem createFromProperties(Properties properties) throws MalformedURLException {
         IRepository repository;
-        String appId = properties.getProperty(Property.ID, null);
+        String appId = properties.getProperty(Property.LAUNCHER_APP_ID, null);
 
         return new ConfiguredConfigSystem(appId);
     }

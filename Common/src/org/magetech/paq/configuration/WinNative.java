@@ -1,4 +1,4 @@
-package org.magetech.paq.launcher.configuration;
+package org.magetech.paq.configuration;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;

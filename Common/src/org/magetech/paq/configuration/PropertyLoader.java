@@ -1,4 +1,4 @@
-package org.magetech.paq.launcher.configuration;
+package org.magetech.paq.configuration;
 
 import org.magetech.paq.Out;
 
@@ -9,7 +9,7 @@ import java.util.Properties;
 /**
  * Created by Aleksander on 06.12.13.
  */
-/*package*/ class PropertyLoader {
+public class PropertyLoader {
     public static Properties load(String name) throws IOException {
         Out<Properties> properties = new Out<Properties>();
         if(getPropertiesFromClassPath(name, properties))

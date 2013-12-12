@@ -108,7 +108,7 @@ public class DefaultLaunchSystem implements ILaunchSystem {
 
         Class<?> mainClass = Class.forName(mainClassName, true, child);
         Method method = mainClass.getDeclaredMethod("main", String[].class);
-        method.invoke(null, new String[0]);
+        method.invoke(null);
     }
 
     private static Repository loadRepository(String dir) throws IOException {

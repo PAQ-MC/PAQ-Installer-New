@@ -9,5 +9,4 @@ import java.io.IOException;
  */
 public interface IUpdateSystem {
     IPackage findPackage(String appId) throws IOException;
-    //IUpdater checkForUpdates() throws IOException;
 }

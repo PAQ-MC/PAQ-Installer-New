@@ -1,8 +1,8 @@
 package org.magetech.paq.launcher.configuration;
 
-import com.github.zafarkhaja.semver.Version;
+import org.magetech.paq.configuration.Property;
+import org.magetech.paq.configuration.PropertyLoader;
 import org.magetech.paq.launcher.IUpdateSystem;
-import org.magetech.paq.launcher.repository.IRepository;
 import org.magetech.paq.launcher.repository.RepositoryUpdateSystem;
 import org.magetech.paq.launcher.repository.WebRepository;
 
@@ -24,7 +24,7 @@ public class ConfiguredUpdateSystem {
     }
 
     public static IUpdateSystem createFromProperties(Properties properties) throws MalformedURLException {
-        String address = properties.getProperty(Property.REPOSITORY, null);
+        String address = properties.getProperty(Property.LAUNCHER_APP_REPOSITORY, null);
         if(address == null)
             throw new IllegalStateException("Repository not specified in properties");
 

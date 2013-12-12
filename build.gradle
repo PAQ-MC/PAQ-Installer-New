@@ -25,6 +25,18 @@ project(':Launcher') {
     }
 }
 
+project(':CommonInstaller') {
+    dependencies {
+        compile project(':Common')
+    }
+}
+
+project(':ClientInstaller') {
+    dependencies {
+        compile project(':CommonInstaller')
+    }
+}
+
 task clean() {
     dependsOn subprojects.clean
 }

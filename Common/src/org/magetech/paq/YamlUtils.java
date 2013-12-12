@@ -1,4 +1,4 @@
-package org.magetech.paq.launcher;
+package org.magetech.paq;
 
 import org.magetech.paq.Assert;
 import org.magetech.paq.Out;

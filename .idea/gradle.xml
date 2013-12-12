@@ -3,20 +3,24 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
+        <option name="gradleHome" value="$USER_HOME$/Downloads/gradle-1.9-all/gradle-1.9" />
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/Common" />
+        <option name="gradleHome" value="$USER_HOME$/Downloads/gradle-1.9-all/gradle-1.9" />
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/CommonInstaller" />
+        <option name="gradleHome" value="$USER_HOME$/Downloads/gradle-1.9-all/gradle-1.9" />
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/Launcher" />
+        <option name="gradleHome" value="$USER_HOME$/Downloads/gradle-1.9-all/gradle-1.9" />
       </GradleProjectSettings>
     </option>
   </component>

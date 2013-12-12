@@ -2,7 +2,7 @@ package org.magetech.paq.launcher.data;
 
 import com.github.zafarkhaja.semver.Version;
 import org.magetech.paq.Out;
-import org.magetech.paq.launcher.YamlUtils;
+import org.magetech.paq.YamlUtils;
 import org.yaml.snakeyaml.TypeDescription;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.nodes.ScalarNode;
@@ -16,7 +16,7 @@ import java.util.List;
  * Created by Aleksander on 08.12.13.
  */
 public class Repository {
-    private List<RepositoryPackage> _packages;
+    private final List<RepositoryPackage> _packages;
 
     private Repository(List<RepositoryPackage> packages) {
         _packages = packages;
@@ -113,23 +113,4 @@ public class Repository {
             Collections.sort(_versions);
         }
     }
-
-//    static class RepositoryConstructor extends Constructor {
-//        public RepositoryConstructor() {
-//            super(RepositoryPackage.class);
-//            yamlClassConstructors.put(NodeId.scalar, new ConstructScalar() {
-//                @Override
-//                public Object construct(Node node) {
-//                    if(node.getType().equals(Version.class)) {
-//                        return Version.valueOf(((ScalarNode)node).getValue());
-//                    }
-//
-//                    return super.construct(node);
-//                }
-//            });
-//            TypeDescription packageDescription = new TypeDescription(RepositoryPackage.class);
-//            packageDescription.putListPropertyType("versions", Version.class);
-//            addTypeDescription(packageDescription);
-//        }
-//    }
 }
