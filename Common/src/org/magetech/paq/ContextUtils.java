@@ -10,7 +10,12 @@ import java.util.Stack;
  * Created by Aleksander on 14.12.13.
  */
 public class ContextUtils {
-    private static final Stack<JarClassLoader> _classLoaders = new Stack<JarClassLoader>();
+    private static final Stack<JarClassLoader> _classLoaders;
+
+    static {
+        _classLoaders = new Stack<JarClassLoader>();
+        _classLoaders.push(new JarClassLoader());
+    }
 
     public static Closeable enter(final JarClassLoader classLoader) {
         _classLoaders.push(classLoader);
@@ -26,10 +31,6 @@ public class ContextUtils {
     }
 
     public static ClassLoader get() {
-        if(_classLoaders.empty()) {
-            _classLoaders.push(new JarClassLoader()); // ???
-        }
-
         return _classLoaders.peek();
     }
 }

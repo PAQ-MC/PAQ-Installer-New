@@ -24,22 +24,19 @@ import java.util.List;
  */
 public class Launcher {
     public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException {
-        JarClassLoader mainLoader = new JarClassLoader();
-        try (Closeable context = ContextUtils.enter(mainLoader)) {
-            Logger.info("Loading list of latest versions");
-            IConfigSystem configSystem = ConfiguredConfigSystem.createFromClassPath();
-            IUpdateSystem updateSystem = ConfiguredUpdateSystem.createFromClassPath();
-            ILaunchSystem launchSystem = ConfiguredLaunchSystem.createFromClassPath();
+        Logger.info("Loading list of latest versions");
+        IConfigSystem configSystem = ConfiguredConfigSystem.createFromClassPath();
+        IUpdateSystem updateSystem = ConfiguredUpdateSystem.createFromClassPath();
+        ILaunchSystem launchSystem = ConfiguredLaunchSystem.createFromClassPath();
 
-            String appId = configSystem.getAppId();
-            IPackage pack = updateSystem.findPackage(appId);
-            Version latestVersion = pack.getLastVersion();
+        String appId = configSystem.getAppId();
+        IPackage pack = updateSystem.findPackage(appId);
+        Version latestVersion = pack.getLastVersion();
 
-            if(!launchSystem.hasInstalled(appId, latestVersion)) {
-                launchSystem.installLatest(pack);
-            }
-
-            launchSystem.launch(appId, latestVersion);
+        if(!launchSystem.hasInstalled(appId, latestVersion)) {
+            launchSystem.installLatest(pack);
         }
+
+        launchSystem.launch(appId, latestVersion);
     }
 }
