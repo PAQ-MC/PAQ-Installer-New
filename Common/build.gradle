@@ -21,4 +21,5 @@ dependencies {
     compile group: 'commons-io', name: 'commons-io', version: '2.4'
     compile group: 'org.tinylog', name: 'tinylog', version: '0.8.1'
     compile group: 'net.java.dev.jna', name: 'jna', version: '4.0.0'
+    compile group: 'org.xeustechnologies', name: 'jcl-core', version: '2.5'
 }

@@ -20,4 +20,5 @@ dependencies {
     compile group: 'com.github.zafarkhaja', name: 'java-semver', version: '0.7.1'
     compile group: 'commons-io', name: 'commons-io', version: '2.4'
     compile group: 'org.tinylog', name: 'tinylog', version: '0.8.1'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.2.4'
 }

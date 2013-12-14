@@ -21,4 +21,17 @@ public class UrlUtils {
 
         return base + relative;
     }
+
+    public static String fileName(String path) {
+        if(path.endsWith("/")) {
+            throw new IllegalArgumentException("path cannot end with a slash");
+        }
+
+        int indexOfLastSeparator = path.lastIndexOf('/');
+        if(indexOfLastSeparator == -1) {
+            throw new IllegalArgumentException("path does not contain any slashes");
+        }
+
+        return path.substring(indexOfLastSeparator + 1);
+    }
 }

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: jcl-core-2.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xeustechnologies/jcl-core/2.5/951ac1ad84613f11786cdc8a66ee5626b6b3d24a/jcl-core-2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xeustechnologies/jcl-core/2.5/2d8942a6af403edfabd41d110c8ed231fef6adc7/jcl-core-2.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

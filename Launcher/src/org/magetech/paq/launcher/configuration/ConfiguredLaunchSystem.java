@@ -17,7 +17,7 @@ import java.util.Properties;
  */
 public class ConfiguredLaunchSystem {
     public static ILaunchSystem createFromClassPath() throws IOException {
-        String paqDir = ConfiguredData.getDataDir();
+        String paqDir = ConfiguredData.getDataDir(null);
 
         return new DefaultLaunchSystem(paqDir);
     }

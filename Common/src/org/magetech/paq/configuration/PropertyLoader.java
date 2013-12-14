@@ -1,5 +1,6 @@
 package org.magetech.paq.configuration;
 
+import org.magetech.paq.ContextUtils;
 import org.magetech.paq.Out;
 
 import java.io.IOException;
@@ -12,14 +13,14 @@ import java.util.Properties;
 public class PropertyLoader {
     public static Properties load(String name) throws IOException {
         Out<Properties> properties = new Out<Properties>();
-        if(getPropertiesFromClassPath(name, properties))
+        if(getPropertiesFromClassPath(ContextUtils.get(), name, properties))
             return properties.getValue();
 
         throw new IllegalStateException("properties not found");
     }
 
-    private static boolean getPropertiesFromClassPath(String name, Out<Properties> properties) throws IOException {
-        try(InputStream stream = getStreamFromClassPath(name)) {
+    private static boolean getPropertiesFromClassPath(ClassLoader loader, String name, Out<Properties> properties) throws IOException {
+        try(InputStream stream = getStreamFromClassPath(loader, name)) {
             if(stream != null) {
                 properties.setValue(getPropertiesFromStream(stream));
                 return true;
@@ -34,7 +35,7 @@ public class PropertyLoader {
         return result;
     }
 
-    private static InputStream getStreamFromClassPath(String name) {
-        return PropertyLoader.class.getClassLoader().getResourceAsStream(name);
+    private static InputStream getStreamFromClassPath(ClassLoader loader, String name) {
+        return loader.getResourceAsStream(name);
     }
 }

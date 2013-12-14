@@ -1,9 +1,7 @@
 package org.magetech.paq;
 
-import org.magetech.paq.Assert;
-import org.magetech.paq.Out;
 import org.yaml.snakeyaml.constructor.Construct;
-import org.yaml.snakeyaml.constructor.Constructor;
+import org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor;
 import org.yaml.snakeyaml.nodes.Node;
 import org.yaml.snakeyaml.nodes.NodeId;
 import org.yaml.snakeyaml.nodes.ScalarNode;
@@ -39,10 +37,10 @@ public class YamlUtils {
         public abstract boolean parse(ScalarNode node, Out<T> result);
     }
 
-    public static class ChainConstructor extends Constructor {
+    public static class ChainConstructor extends CustomClassLoaderConstructor {
         public ChainConstructor(Class<? extends Object> type)
         {
-            super(type);
+            super(type, ContextUtils.get());
         }
 
         public <T extends Object> void addConstructor(Class<T> type, TConstruct<T> constructor) {

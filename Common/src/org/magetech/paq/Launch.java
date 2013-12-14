@@ -1,35 +1,42 @@
 package org.magetech.paq;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import org.xeustechnologies.jcl.JarClassLoader;
+import org.xeustechnologies.jcl.context.DefaultContextLoader;
+
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Properties;
+import java.util.jar.Attributes;
+import java.util.jar.JarInputStream;
+import java.util.jar.Manifest;
 
 /**
  * Created by Aleksander on 13.12.13.
  */
 public class Launch {
-    public static void jar(File jarFile, String[] args) throws MalformedURLException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        URLClassLoader child = new URLClassLoader(new URL[] {jarFile.toURL()}, Launch.class.getClassLoader());
+    public static void jar(File jarFile, String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         String mainClassName = null;
-        try(InputStream is = child.getResourceAsStream("META-INF/MANIFEST.MF")) {
-            Properties p = new Properties();
-            p.load(is);
-            mainClassName = p.getProperty("Main-Class");
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        try(InputStream is = new FileInputStream(jarFile);
+            JarInputStream jarStream = new JarInputStream(is)) {
+            Manifest mf = jarStream.getManifest();
+            Attributes attributes = mf.getMainAttributes();
+            mainClassName = attributes.getValue("Main-Class");
         }
 
         if(mainClassName == null)
             throw new IllegalStateException("No main class found in manifest");
 
-        Class<?> mainClass = Class.forName(mainClassName, true, child);
-        Method method = mainClass.getDeclaredMethod("main", String[].class);
-        method.invoke(null);
+        JarClassLoader jcl = new JarClassLoader();
+        jcl.add(jarFile.getAbsolutePath());
+        try (Closeable context = ContextUtils.enter(jcl)) {
+            Class<?> mainClass = Class.forName(mainClassName, true, jcl);
+            Method method = mainClass.getDeclaredMethod("main", String[].class);
+            method.invoke(null, new Object[] { args });
+        }
     }
 }

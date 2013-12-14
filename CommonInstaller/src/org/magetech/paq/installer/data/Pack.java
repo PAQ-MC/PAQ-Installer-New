@@ -3,6 +3,7 @@ package org.magetech.paq.installer.data;
 import com.github.zafarkhaja.semver.Version;
 import org.magetech.paq.Out;
 import org.magetech.paq.YamlUtils;
+import org.yaml.snakeyaml.TypeDescription;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.nodes.ScalarNode;
 
@@ -17,24 +18,61 @@ import java.util.List;
  * Created by Aleksander on 12.12.13.
  */
 public class Pack {
-    private final List<ModConfig> _mods;
-    private final Version _version;
+    private String _id;
+    private String _configUrl;
+    private String _forgeUrl;
+    private List<ModConfig> _mods;
+    private Version _version;
 
-    private Pack(List<ModConfig> mods, Version version) {
-        _mods = mods;
-        _version = version;
+    public Pack() {
+    }
+
+    public String getId() {
+        return _id;
+    }
+
+    public void setId(String value) {
+        _id = value;
     }
 
     public List<ModConfig> getMods() {
         return _mods;
     }
 
+    public void setMods(List<ModConfig> value) {
+        _mods = value;
+    }
+
     public Version getVersion() {
         return _version;
     }
 
+    public void setVersion(Version value) {
+        _version = value;
+    }
+
+    public String getConfig() {
+        return _configUrl;
+    }
+
+    public void setConfig(String value) {
+        _configUrl = value;
+    }
+
+    public String getForge() {
+        return _forgeUrl;
+    }
+
+    public void setForge(String value) {
+        _forgeUrl = value;
+    }
+
     private static Yaml getYaml() {
-        YamlUtils.ChainConstructor constructor = new YamlUtils.ChainConstructor(ModConfig.class);
+        YamlUtils.ChainConstructor constructor = new YamlUtils.ChainConstructor(Pack.class);
+
+        TypeDescription packageDescription = new TypeDescription(Pack.class);
+        packageDescription.putListPropertyType("mods", ModConfig.class);
+        constructor.addTypeDescription(packageDescription);
 
         constructor.addConstructor(Version.class, new YamlUtils.TConstruct<Version>() {
             @Override
@@ -44,75 +82,29 @@ public class Pack {
             }
         });
 
+        constructor.addConstructor(ModConfig.class, new YamlUtils.TConstruct<ModConfig>() {
+            @Override
+            public boolean parse(ScalarNode node, Out<ModConfig> result) {
+                result.setValue(ModConfig.parse(node.getValue()));
+                return true;
+            }
+        });
+
         return new Yaml(constructor);
     }
 
-    private static Pack load(Iterable<Object> allDocs, Version version) {
-        ArrayList<ModConfig> mods = new ArrayList<ModConfig>();
-        for(Object o : allDocs) {
-            mods.add((ModConfig) o);
-        }
-        return new Pack(mods, version);
+    private static Pack load(Object docs) {
+        return (Pack)docs;
     }
 
     public static Pack load(String in) {
-        Version version = getVersion(in);
         Yaml parser = getYaml();
-        return load(parser.loadAll(in), version);
+        return load(parser.load(in));
     }
 
     public static Pack load(InputStream in) throws IOException {
-        Version version = getVersion(in);
         Yaml parser = getYaml();
-        return load(parser.loadAll(in), version);
-    }
-
-    private static Version getVersion(String s) {
-        Out<Version> version = new Out<Version>();
-        String[] lines = s.split("\n");
-        for(String line : lines) {
-            if(getVersionFromLine(line, version))
-                return version.getValue();
-        }
-
-        throw new IllegalStateException("Version-string not found");
-    }
-
-    private static Version getVersion(InputStream is) throws IOException {
-        Out<Version> version = new Out<Version>();
-        String line;
-        byte[] buffer = new byte[1024];
-        while(true) {
-            int charIndex = 0;
-            while(true) {
-                byte c = (byte)is.read();
-
-                if(c == '\n') // eol
-                    break;
-
-                if(charIndex < buffer.length)
-                    buffer[charIndex++] = c;
-            }
-
-            line = new String(buffer, 0, charIndex, "utf-8");
-
-            if(getVersionFromLine(line, version))
-                return version.getValue();
-        }
-    }
-
-    private static boolean getVersionFromLine(String line, Out<Version> version) {
-        if(line.startsWith("#version: ")) {
-            String versionString = line.substring("#version: ".length());
-            version.setValue(Version.valueOf(versionString));
-            return true;
-        }
-
-        return false;
-    }
-
-    public static String getVersionString(Version version) {
-        return "#version: " + version.toString();
+        return load(parser.load(in));
     }
 
     public static class ModConfig {
@@ -133,6 +125,19 @@ public class Pack {
 
         public void setVersion(Version value) {
             _version = value;
+        }
+
+        public static ModConfig parse(String value) {
+            int indexOfLastAt = value.lastIndexOf('@');
+            String id = value.substring(0, indexOfLastAt);
+            String versionString = value.substring(indexOfLastAt + 1);
+
+            Version version = Version.valueOf(versionString);
+
+            ModConfig conf = new ModConfig();
+            conf.setId(id);
+            conf.setVersion(version);
+            return conf;
         }
     }
 }
