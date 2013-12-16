@@ -13,7 +13,6 @@ import org.magetech.paq.installer.data.ModRepository;
 import org.magetech.paq.installer.data.Pack;
 import org.magetech.paq.installer.data.PackConfig;
 import org.magetech.paq.installer.data.PackRepository;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -23,7 +22,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 /**
  * Created by Aleksander on 09.12.13.
@@ -189,6 +187,8 @@ public class Installer {
         List<ModRepository.ModConfig> mods = new ArrayList<ModRepository.ModConfig>();
         for(Pack.ModConfig mod : packConfig.getMods()) {
             ModRepository.ModConfig m = modRepo.find(mod.getId(), mod.getVersion());
+            if(m.getSide().equals(ModRepository.Side.Client) && isServer) continue;
+            if(m.getSide().equals(ModRepository.Side.Server) && !isServer) continue;
 
             mods.add(m);
             download(m);
