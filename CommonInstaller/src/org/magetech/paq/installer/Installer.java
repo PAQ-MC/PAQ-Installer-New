@@ -217,7 +217,7 @@ public class Installer {
         }
 
         if(!isServer) {
-            //Minecraft.updatePackLaunchProfile(packConfig.getId(), forgeVersionId, instDir);
+            Minecraft.updatePackLaunchProfile(packConfig.getId(), forgeVersionId, instDir);
         }
 
         _adapter.end();
