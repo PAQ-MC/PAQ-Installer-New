@@ -6,6 +6,12 @@ package org.magetech.paq;
 public class Out<T> {
     private T _value = null;
 
+    public Out() {}
+
+    public Out(T defaultValue) {
+        _value = defaultValue;
+    }
+
     public void setValue(T value) {
         _value = value;
     }

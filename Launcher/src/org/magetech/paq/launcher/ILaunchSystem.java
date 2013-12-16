@@ -14,5 +14,5 @@ import java.net.MalformedURLException;
 public interface ILaunchSystem {
     boolean hasInstalled(String appId, Version latestVersion);
     void installLatest(IPackage pack) throws IOException;
-    void launch(String appId, Version version) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException;
+    void launch(String appId, Version version, String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException;
 }

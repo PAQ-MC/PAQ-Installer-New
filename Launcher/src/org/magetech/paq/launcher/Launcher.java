@@ -37,6 +37,6 @@ public class Launcher {
             launchSystem.installLatest(pack);
         }
 
-        launchSystem.launch(appId, latestVersion);
+        launchSystem.launch(appId, latestVersion, args);
     }
 }

@@ -126,6 +126,9 @@ public class ModRepository {
         }
 
         public Side getSide() {
+            if(_side == null)
+                return Side.Both;
+
             return _side;
         }
 

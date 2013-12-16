@@ -5,17 +5,10 @@ import org.apache.commons.io.FilenameUtils;
 import org.magetech.paq.Launch;
 import org.magetech.paq.launcher.data.Repository;
 import org.magetech.paq.launcher.repository.IPackage;
-import org.yaml.snakeyaml.Yaml;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.nio.charset.Charset;
-import java.util.Properties;
 
 /**
  * Created by Aleksander on 08.12.13.
@@ -94,9 +87,9 @@ public class DefaultLaunchSystem implements ILaunchSystem {
     }
 
     @Override
-    public void launch(String appId, Version version) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public void launch(String appId, Version version, String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         File jar = new File(getAppPath(appId, version));
-        Launch.jar(jar, new String[0]);
+        Launch.jar(jar, args);
     }
 
     private static Repository loadRepository(String dir) throws IOException {

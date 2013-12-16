@@ -14,10 +14,7 @@ import org.magetech.paq.installer.data.Pack;
 import org.magetech.paq.installer.data.PackConfig;
 import org.magetech.paq.installer.data.PackRepository;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -85,11 +82,14 @@ public class Installer {
     public void updateRepos() throws IOException {
         new File(_dir).mkdirs();
 
-        try(InputStream is = new URL(_onlineRepo).openStream()) {
+        _adapter.reset(2);
+        try (Closeable ignored = _adapter.beginAction("Downloading pack repository");
+            InputStream is = new URL(_onlineRepo).openStream()) {
             StreamUtils.saveTo(is, _repoFile);
         }
 
-        try(InputStream is = new URL(_onlineModRepo).openStream()) {
+        try (Closeable ignored = _adapter.beginAction("Downloading mod list");
+            InputStream is = new URL(_onlineModRepo).openStream()) {
             StreamUtils.saveTo(is, _modsFile);
         }
     }
@@ -112,7 +112,7 @@ public class Installer {
         return file;
     }
 
-    private void download(ModRepository.ModConfig mod) throws IOException {
+    private void download(ModRepository.ModConfig mod) throws IOException, InvocationTargetException, InterruptedException {
         String file = getFile(mod);
 
         if(new File(file).exists())
@@ -141,7 +141,7 @@ public class Installer {
         FileUtils.copyFile(new File(file), new File(wantedFile));
     }
 
-    public void install(String pack, boolean isServer) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public void install(String pack, boolean isServer) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InterruptedException {
         updateRepos();
         PackRepository packsRepo;
         ModRepository modRepo;
@@ -154,11 +154,14 @@ public class Installer {
 
         String packDir = FilenameUtils.concat(_packsDir, pack);
         String packFile = FilenameUtils.concat(packDir, pack + ".yml");
+
         String onlinePackFile = UrlUtils.relativeTo(_onlineRepo, pack + "/" + pack + ".yml");
 
         new File(packDir).mkdirs();
 
-        try (InputStream is = new URL(onlinePackFile).openStream()) {
+        _adapter.reset(3);
+        try (Closeable ignored = _adapter.beginAction("Downloading mod-pack available versions");
+            InputStream is = new URL(onlinePackFile).openStream()) {
             StreamUtils.saveTo(is, packFile);
         }
 
@@ -170,7 +173,8 @@ public class Installer {
         String specificPackFile = FilenameUtils.concat(packDir, pack + "-" + latest.toString() + ".yml");
         String onlineSpecificPackFile = UrlUtils.relativeTo(onlinePackFile, pack + "-" + latest.toString() + ".yml");
 
-        try (InputStream is = new URL(onlineSpecificPackFile).openStream()) {
+        try (Closeable ignored = _adapter.beginAction("Downloading mod-pack info");
+            InputStream is = new URL(onlineSpecificPackFile).openStream()) {
             StreamUtils.saveTo(is, specificPackFile);
         }
 
@@ -180,9 +184,12 @@ public class Installer {
         }
 
         String configFile = FilenameUtils.concat(packDir, pack + "-" + packConfig.getVersion() + "-config.zip");
-        try (InputStream is = new URL(packConfig.getConfig()).openStream()) {
+        try (Closeable ignored = _adapter.beginAction("Downloading mod-pack mod-configs");
+            InputStream is = new URL(packConfig.getConfig()).openStream()) {
             StreamUtils.saveTo(is, configFile);
         }
+
+        _adapter.reset(packConfig.getMods().size());
 
         List<ModRepository.ModConfig> mods = new ArrayList<ModRepository.ModConfig>();
         for(Pack.ModConfig mod : packConfig.getMods()) {
@@ -191,7 +198,10 @@ public class Installer {
             if(m.getSide().equals(ModRepository.Side.Server) && !isServer) continue;
 
             mods.add(m);
-            download(m);
+
+            try(Closeable ignored = _adapter.beginAction("Downloading " + mod.getId() + " " + mod.getVersion())) {
+                download(m);
+            }
         }
 
         String forgeVersionId = ForgeInstaller.install(packConfig.getForge(), isServer);
@@ -207,7 +217,9 @@ public class Installer {
         }
 
         if(!isServer) {
-            Minecraft.updatePackLaunchProfile(packConfig.getId(), forgeVersionId, instDir);
+            //Minecraft.updatePackLaunchProfile(packConfig.getId(), forgeVersionId, instDir);
         }
+
+        _adapter.end();
     }
 }

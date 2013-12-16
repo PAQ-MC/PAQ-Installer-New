@@ -1,13 +1,20 @@
 package org.magetech.paq.installer.client;
 
+import org.magetech.paq.Out;
 import org.magetech.paq.ResourceUtils;
+import org.magetech.paq.installer.DialogInstallAdapter;
+import org.magetech.paq.installer.Installer;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.net.URI;
 
 public class InstallerWindow extends JDialog {
     private final int buttonY = 380;
@@ -62,8 +69,7 @@ public class InstallerWindow extends JDialog {
 
     private void onOK() {
 // add your code here
-        _install = true;
-        dispose();
+        install();
     }
 
     private void onCancel() {
@@ -71,16 +77,99 @@ public class InstallerWindow extends JDialog {
         dispose();
     }
 
-    public boolean shouldInstall() {
-        return _install;
+    private void install() {
+        final ProgressMonitor monitor = new ProgressMonitor(this, "Installing", null, 0, 1);
+        monitor.setMillisToPopup(0);
+        monitor.setMillisToDecideToPopup(0);
+
+        final Installer installer = new Installer(new DialogInstallAdapter(this, "Installing") {
+
+            @Override
+            public File downloadManually(final String url, final String fileName) throws IOException, InvocationTargetException, InterruptedException {
+                final Out<File> result = new Out<File>();
+                final Out<IOException> exceptionOut = new Out<IOException>();
+                final Out<Boolean> success = new Out<Boolean>(false);
+                SwingUtilities.invokeAndWait(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            while(true) {
+                                Desktop.getDesktop().browse(URI.create(url));
+                                JFileChooser c = new JFileChooser();
+                                for(FileFilter f : c.getChoosableFileFilters())
+                                    c.removeChoosableFileFilter(f);
+
+                                c.addChoosableFileFilter(new FileFilter() {
+                                    @Override
+                                    public boolean accept(File f) {
+                                        return f.isDirectory() || f.getPath().endsWith(fileName);
+                                    }
+
+                                    @Override
+                                    public String getDescription() {
+                                        return fileName;
+                                    }
+                                });
+
+                                //c.setSelectedFile(new File(fileName));
+                                c.setDialogTitle("Select downloaded file");
+                                c.grabFocus();
+                                int retVal = c.showOpenDialog(InstallerWindow.this);
+                                if(retVal == JFileChooser.APPROVE_OPTION) {
+                                    File f = c.getSelectedFile();
+                                    if(f.exists()) {
+                                        result.setValue(f);
+                                        success.setValue(true);
+                                        return;
+                                    }
+                                    else {
+                                        JOptionPane.showMessageDialog(null, "Non-existing file selected. Retrying.");
+                                    }
+                                }
+                            }
+                        } catch (IOException e) {
+                            exceptionOut.setValue(e);
+                            return;
+                        }
+                    }
+                });
+                if(success.getValue())
+                    return result.getValue();
+
+                throw exceptionOut.getValue();
+            }
+        });
+
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    installer.install("PAQ", false);
+                    monitor.close();
+                    JOptionPane.showMessageDialog(InstallerWindow.this, "Installation completed successfully", "Completed", JOptionPane.INFORMATION_MESSAGE);
+                } catch (IOException | ClassNotFoundException | NoSuchMethodException | InvocationTargetException | IllegalAccessException | InterruptedException e) {
+                    e.printStackTrace();
+                }
+                monitor.close();
+                InstallerWindow.this.dispose();
+            }
+        }.start();
     }
 
-    public static boolean run() throws IOException {
-        InstallerWindow dialog = new InstallerWindow();
-        dialog.pack();
-        dialog.setLocationRelativeTo(null);
-        dialog.setVisible(true);
-        return dialog.shouldInstall();
+    public static void run() throws IOException {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    InstallerWindow dialog = new InstallerWindow();
+                    dialog.pack();
+                    dialog.setLocationRelativeTo(null);
+                    dialog.setVisible(true);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     private void setupComponents() throws IOException {
