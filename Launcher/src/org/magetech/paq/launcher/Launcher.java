@@ -2,6 +2,8 @@ package org.magetech.paq.launcher;
 
 import com.github.zafarkhaja.semver.Version;
 import org.magetech.paq.ContextUtils;
+import org.magetech.paq.DialogBackgroundReporter;
+import org.magetech.paq.IBackgroundReporter;
 import org.magetech.paq.launcher.configuration.ConfiguredConfigSystem;
 import org.magetech.paq.launcher.configuration.ConfiguredLaunchSystem;
 import org.magetech.paq.launcher.configuration.ConfiguredUpdateSystem;
@@ -24,9 +26,42 @@ import java.util.List;
  */
 public class Launcher {
     public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+        IBackgroundReporter reporter;
+
+        if(args.length == 0) {
+            // gui
+            reporter = new DialogBackgroundReporter(null, "Downloading") {
+            };
+        } else {
+            // console
+            reporter = new IBackgroundReporter() {
+                @Override
+                public void reset(int max) {
+                    // ignored in console
+                }
+
+                @Override
+                public Closeable beginAction(final String name) {
+                    Logger.info("Started " + name);
+
+                    return new Closeable() {
+                        @Override
+                        public void close() throws IOException {
+                            Logger.info("Ended " + name);
+                        }
+                    };
+                }
+
+                @Override
+                public void end() {
+                    // ignored in console
+                }
+            };
+        }
+
         Logger.info("Loading list of latest versions");
         IConfigSystem configSystem = ConfiguredConfigSystem.createFromClassPath();
-        IUpdateSystem updateSystem = ConfiguredUpdateSystem.createFromClassPath();
+        IUpdateSystem updateSystem = ConfiguredUpdateSystem.createFromClassPath(reporter);
         ILaunchSystem launchSystem = ConfiguredLaunchSystem.createFromClassPath();
 
         String appId = configSystem.getAppId();
@@ -37,6 +72,7 @@ public class Launcher {
             launchSystem.installLatest(pack);
         }
 
+        reporter.end();
         launchSystem.launch(appId, latestVersion, args);
     }
 }

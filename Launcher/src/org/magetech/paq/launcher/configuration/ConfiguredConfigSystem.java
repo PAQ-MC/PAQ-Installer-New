@@ -1,6 +1,7 @@
 package org.magetech.paq.launcher.configuration;
 
 import org.magetech.paq.Assert;
+import org.magetech.paq.IBackgroundReporter;
 import org.magetech.paq.configuration.Property;
 import org.magetech.paq.configuration.PropertyLoader;
 import org.magetech.paq.launcher.IConfigSystem;
