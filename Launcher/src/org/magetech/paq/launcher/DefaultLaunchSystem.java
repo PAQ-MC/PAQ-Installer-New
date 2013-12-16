@@ -2,11 +2,16 @@ package org.magetech.paq.launcher;
 
 import com.github.zafarkhaja.semver.Version;
 import org.apache.commons.io.FilenameUtils;
+import org.magetech.paq.Assert;
+import org.magetech.paq.IBackgroundReporter;
 import org.magetech.paq.Launch;
 import org.magetech.paq.launcher.data.Repository;
 import org.magetech.paq.launcher.repository.IPackage;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.Charset;
 
@@ -16,17 +21,25 @@ import java.nio.charset.Charset;
 public class DefaultLaunchSystem implements ILaunchSystem {
     private final Object _lock = new Object();
     private final String _confDir;
+    private final IBackgroundReporter _reporter;
+    private final Version _version;
     private Repository _repository;
 
-    public DefaultLaunchSystem(String paqDir) {
+    public DefaultLaunchSystem(String paqDir, Version currentVersion, IBackgroundReporter reporter) {
+        Assert.notNull(paqDir, "paqDir");
+        Assert.notNull(reporter, "reporter");
+        Assert.notNull(currentVersion, "currentVersion");
+
         _confDir = paqDir;
+        _reporter = reporter;
+        _version = currentVersion;
     }
 
     private void EnsureRepository() throws IOException {
         if(_repository == null) {
             synchronized (_lock) {
                 if(_repository == null) {
-                    _repository = loadRepository(_confDir);
+                    _repository = loadRepository(_confDir, _version);
                 }
             }
         }
@@ -78,7 +91,7 @@ public class DefaultLaunchSystem implements ILaunchSystem {
     private Repository.RepositoryPackage find(String id) throws IOException {
         EnsureRepository();
 
-        for(Repository.RepositoryPackage p : _repository.getPackages()) {
+        for(Repository.RepositoryPackage p : _repository.getApps()) {
             if(p.getId().equals(id))
                 return p;
         }
@@ -92,15 +105,21 @@ public class DefaultLaunchSystem implements ILaunchSystem {
         Launch.jar(jar, args);
     }
 
-    private static Repository loadRepository(String dir) throws IOException {
+    private static Repository loadRepository(String dir, Version version) throws IOException {
         String file = FilenameUtils.concat(dir, "config.yml");
-        if(new File(file).exists()) {
+        File f = new File(file);
+        if(f.exists()) {
             try(FileInputStream fs = new FileInputStream(file)) {
-                return Repository.load(fs);
+                Repository repo =  Repository.load(fs);
+                if(repo.getVersion().equals(version))
+                    return repo;
             }
         }
 
-        return Repository.empty();
+        if(f.exists())
+            f.delete();
+
+        return Repository.empty(version);
     }
 
     private static void writeRepository(String dir, String content) throws IOException {

@@ -29,7 +29,8 @@ jar {
 
     manifest {
         attributes(
-                "Main-Class": "org.magetech.paq.launcher.Launcher"
+                "Main-Class": "org.magetech.paq.launcher.Launcher",
+                "Launcher-Version": version
         )
     }
 }

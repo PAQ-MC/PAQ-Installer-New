@@ -1,15 +1,12 @@
 package org.magetech.paq.launcher.repository;
 
+import com.github.zafarkhaja.semver.Version;
 import org.magetech.paq.Assert;
-import org.magetech.paq.IBackgroundReporter;
 import org.magetech.paq.launcher.IUpdateSystem;
 
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Created by Aleksander on 06.12.13.
- */
 public class RepositoryUpdateSystem implements IUpdateSystem {
     private final IRepository _repository;
     List<IPackage> _packages;
@@ -37,5 +34,10 @@ public class RepositoryUpdateSystem implements IUpdateSystem {
         }
 
         return null;
+    }
+
+    @Override
+    public void checkUpToDate(Version launcherVersion) throws IOException {
+        _repository.checkUpToDate(launcherVersion);
     }
 }

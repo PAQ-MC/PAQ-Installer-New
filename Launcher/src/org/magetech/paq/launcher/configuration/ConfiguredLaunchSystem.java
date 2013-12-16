@@ -1,24 +1,17 @@
 package org.magetech.paq.launcher.configuration;
 
-import com.sun.jna.Platform;
-import org.apache.commons.io.FilenameUtils;
+import com.github.zafarkhaja.semver.Version;
+import org.magetech.paq.IBackgroundReporter;
 import org.magetech.paq.configuration.ConfiguredData;
-import org.magetech.paq.configuration.Property;
-import org.magetech.paq.configuration.PropertyLoader;
 import org.magetech.paq.launcher.DefaultLaunchSystem;
 import org.magetech.paq.launcher.ILaunchSystem;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.Properties;
 
-/**
- * Created by Aleksander on 08.12.13.
- */
 public class ConfiguredLaunchSystem {
-    public static ILaunchSystem createFromClassPath() throws IOException {
+    public static ILaunchSystem createFromClassPath(IBackgroundReporter reporter, Version currentVersion) throws IOException {
         String paqDir = ConfiguredData.getDataDir(null);
 
-        return new DefaultLaunchSystem(paqDir);
+        return new DefaultLaunchSystem(paqDir, currentVersion, reporter);
     }
 }

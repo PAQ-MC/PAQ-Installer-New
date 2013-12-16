@@ -12,25 +12,40 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by Aleksander on 08.12.13.
- */
 public class Repository {
-    private final List<RepositoryPackage> _packages;
+    private Version _version;
+    private List<RepositoryPackage> _packages;
 
-    private Repository(List<RepositoryPackage> packages) {
-        _packages = packages;
-    }
+    public Repository() {}
+    public Repository(Version version) { setVersion(version); }
 
-    public List<RepositoryPackage> getPackages() {
+    public List<RepositoryPackage> getApps() {
+        if(_packages == null)
+            _packages = new ArrayList<RepositoryPackage>();
+
         return _packages;
     }
 
+    public void setApps(List<RepositoryPackage> packages) {
+        _packages = packages;
+    }
+
+    public Version getVersion() {
+        return _version;
+    }
+
+    public void setVersion(Version value) {
+        _version = value;
+    }
+
     private static Yaml getYaml() {
-        YamlUtils.ChainConstructor constructor = new YamlUtils.ChainConstructor(RepositoryPackage.class);
+        YamlUtils.ChainConstructor constructor = new YamlUtils.ChainConstructor(Repository.class);
+        TypeDescription repositoryDescription = new TypeDescription(Repository.class);
+        repositoryDescription.putListPropertyType("apps", RepositoryPackage.class);
         TypeDescription packageDescription = new TypeDescription(RepositoryPackage.class);
         packageDescription.putListPropertyType("versions", Version.class);
         constructor.addTypeDescription(packageDescription);
+        constructor.addTypeDescription(repositoryDescription);
 
         constructor.addConstructor(Version.class, new YamlUtils.TConstruct<Version>() {
             @Override
@@ -42,26 +57,22 @@ public class Repository {
         return new Yaml(constructor);
     }
 
-    private static Repository load(Iterable<Object> allDocs) {
-        ArrayList<RepositoryPackage> packages = new ArrayList<RepositoryPackage>();
-        for(Object o : allDocs) {
-            packages.add((RepositoryPackage)o);
-        }
-        return new Repository(packages);
+    private static Repository load(Object repo) {
+        return (Repository)repo;
     }
 
     public static Repository load(String in) {
         Yaml parser = getYaml();
-        return load(parser.loadAll(in));
+        return load(parser.load(in));
     }
 
     public static Repository load(InputStream in) {
         Yaml parser = getYaml();
-        return load(parser.loadAll(in));
+        return load(parser.load(in));
     }
 
-    public static Repository empty() {
-        return new Repository(new ArrayList<RepositoryPackage>(0));
+    public static Repository empty(Version version) {
+        return new Repository(version);
     }
 
     public RepositoryPackage add(String id) {
@@ -74,15 +85,15 @@ public class Repository {
 
     public String dump() {
         StringBuilder sb = new StringBuilder();
+        sb.append("version: ").append(getVersion().toString()).append("\n");
+        sb.append("apps:\n");
         for(int i = 0; i < _packages.size(); i++) {
-            if(i > 0) {
-                sb.append("---\n");
-            }
             RepositoryPackage p = _packages.get(i);
-            sb.append("id: ").append(p._id).append("\n");
-            sb.append("versions:\n");
+            sb.append("  -\n");
+            sb.append("    id: ").append(p._id).append("\n");
+            sb.append("    versions:\n");
             for(Version v : p.getVersions()) {
-                sb.append("    - \"").append(v.toString()).append("\"\n");
+                sb.append("      - ").append(v.toString()).append("\n");
             }
         }
         return sb.toString();

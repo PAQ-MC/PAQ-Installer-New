@@ -8,7 +8,10 @@ import org.magetech.paq.Out;
 import org.magetech.paq.StreamUtils;
 import org.magetech.paq.launcher.data.Repository;
 
-import java.io.*;
+import java.io.Closeable;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,6 +23,7 @@ import java.util.List;
 public class WebRepository implements IRepository {
     private final URL _url;
     private final IBackgroundReporter _reporter;
+    private Repository _repository;
 
     public WebRepository(URL url, IBackgroundReporter reporter) {
         Assert.notNull(url, "url");
@@ -33,17 +37,44 @@ public class WebRepository implements IRepository {
     public List<IPackage> getPackages() throws IOException {
         List<IPackage> packages = new ArrayList<IPackage>();
 
+        ensureRepository();
+        for(Repository.RepositoryPackage packageConfig : _repository.getApps()) {
+            Out<IPackage> pack = new Out<IPackage>();
+            if(WebPackage.load(_url, packageConfig, _reporter, pack))
+                packages.add(pack.getValue());
+        }
+        return packages;
+    }
+
+    private void ensureRepository() throws IOException {
+        if(_repository == null) {
+            _repository = loadRepository(_url);
+        }
+    }
+
+    private Repository loadRepository(URL url) throws IOException {
         _reporter.reset(1);
         try(Closeable ignored = _reporter.beginAction("Downloading application list");
             InputStream in = _url.openStream()) {
-            Repository r = Repository.load(in);
-            for(Repository.RepositoryPackage packageConfig : r.getPackages()) {
-                Out<IPackage> pack = new Out<IPackage>();
-                if(WebPackage.load(_url, packageConfig, _reporter, pack))
-                    packages.add(pack.getValue());
-            }
+            return Repository.load(in);
         }
-        return packages;
+    }
+
+    @Override
+    public void checkUpToDate(Version runningVersion) throws IOException {
+        Assert.notNull(runningVersion, "runningVersion");
+
+        ensureRepository();
+
+        if(_repository.getVersion() == null) {
+            _reporter.error("Reporitory does not contain version information", "Repository error");
+            System.exit(0);
+        }
+
+        if(runningVersion.lessThan(_repository.getVersion())) {
+            _reporter.error("The following launcher is outdated, please download a new launcher", "Launcher outdated");
+            System.exit(0);
+        }
     }
 
     static class WebPackage implements IPackage {
