@@ -95,6 +95,8 @@ public class InstallerWindow extends JDialog {
                         try {
                             while(true) {
                                 Desktop.getDesktop().browse(URI.create(url));
+                                JOptionPane.showMessageDialog(InstallerWindow.this, fileName + " needs to be manually downloaded. A browser window just opened, please download the file and select it afterwords in the file browser.");
+
                                 JFileChooser c = new JFileChooser();
                                 for(FileFilter f : c.getChoosableFileFilters())
                                     c.removeChoosableFileFilter(f);
@@ -123,7 +125,7 @@ public class InstallerWindow extends JDialog {
                                         return;
                                     }
                                     else {
-                                        JOptionPane.showMessageDialog(null, "Non-existing file selected. Retrying.");
+                                        JOptionPane.showMessageDialog(InstallerWindow.this, "Non-existing file selected. Retrying.");
                                     }
                                 }
                             }
