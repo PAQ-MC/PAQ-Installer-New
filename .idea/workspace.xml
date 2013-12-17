@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1db3bb88-641d-469c-ba41-dc145d4e67a0" name="Default" comment="v.1.1.0&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Installer.java" afterPath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Installer.java" />
+    <list default="true" id="1db3bb88-641d-469c-ba41-dc145d4e67a0" name="Default" comment="Reneabled Minecraft Launcher Profile Updates">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientInstaller/ClientInstaller.iml" afterPath="$PROJECT_DIR$/ClientInstaller/ClientInstaller.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Common/Common.iml" afterPath="$PROJECT_DIR$/Common/Common.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CommonInstaller/CommonInstaller.iml" afterPath="$PROJECT_DIR$/CommonInstaller/CommonInstaller.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Launcher/Launcher.iml" afterPath="$PROJECT_DIR$/Launcher/Launcher.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Minecraft.java" afterPath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Minecraft.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PAQ.iml" afterPath="$PROJECT_DIR$/PAQ.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CommonInstaller/res/installer.properties" afterPath="$PROJECT_DIR$/CommonInstaller/res/installer.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Launcher/res/launcher.properties" afterPath="$PROJECT_DIR$/Launcher/res/launcher.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PAQ.iws" />
@@ -67,77 +75,7 @@
     <favorites_list name="PAQ" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="launcher.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/res/launcher.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IUpdateSystem.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/IUpdateSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientInstaller.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/ClientInstaller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RepositoryUpdateSystem.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/repository/RepositoryUpdateSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfiguredLaunchSystem.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/configuration/ConfiguredLaunchSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Repository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/data/Repository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="29" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.0" vertical-offset="1129" max-vertical-offset="1802">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Installer.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Installer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="219" column="12" selection-start="7799" selection-end="7799" vertical-scroll-proportion="0.79791975" vertical-offset="2880" max-vertical-offset="3621">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -165,7 +103,7 @@
           <key>
             <ExternalProjectPojo>
               <option name="name" value="PAQ" />
-              <option name="path" value="$PROJECT_DIR$/ClientInstaller" />
+              <option name="path" value="$PROJECT_DIR$/Common" />
             </ExternalProjectPojo>
           </key>
           <value>
@@ -223,72 +161,9 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Do you know who knows?" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="knows" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects it depends on." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="buildNeeded" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles classes 'test'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="testClasses" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs the unit tests." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="test" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="test" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Copies signed libraries to a specified output folder for later packaging." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="copySignedLibs" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs all checks." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="check" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles Java source 'test:java'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="compileTestJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="check" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Assembles the outputs of this project." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
                 <option name="name" value="assemble" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Deletes the build directory." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="clean" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles Java source 'main:java'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="compileJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates Javadoc API documentation for the main source code." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="javadoc" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles a jar archive containing the main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="jar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
@@ -301,8 +176,14 @@
                 <option name="name" value="buildDependents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="clean" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
+                <option name="name" value="check" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles classes 'main'." />
@@ -310,9 +191,39 @@
                 <option name="name" value="classes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Processes resources 'test:resources'." />
+                <option name="description" value="Deletes the build directory." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="processTestResources" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles Java source 'main:java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles Java source 'test:java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Copies signed libraries to a specified output folder for later packaging." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
+                <option name="name" value="copySignedLibs" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Do you know who knows?" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
+                <option name="name" value="knows" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Processes resources 'main:resources'." />
@@ -320,13 +231,24 @@
                 <option name="name" value="processResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Processes resources 'test:resources'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
-                <option name="name" value="build" />
+                <option name="name" value="processTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Combines all classpath resources into a single jar." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
                 <option name="name" value="shadow" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles classes 'test'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/ClientInstaller" />
+                <option name="name" value="testClasses" />
               </ExternalTaskPojo>
             </list>
           </value>
@@ -335,19 +257,9 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles the outputs of this project." />
+                <option name="description" value="Do you know who knows?" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="assemble" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="build" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="buildDependents" />
+                <option name="name" value="knows" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project and all projects it depends on." />
@@ -355,14 +267,42 @@
                 <option name="name" value="buildNeeded" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Assembles classes 'test'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Copies signed libraries to a specified output folder for later packaging." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
+                <option name="name" value="copySignedLibs" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Runs all checks." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
                 <option name="name" value="check" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles classes 'main'." />
+                <option name="description" value="Compiles Java source 'test:java'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="classes" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
+                <option name="name" value="assemble" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Deletes the build directory." />
@@ -375,14 +315,9 @@
                 <option name="name" value="compileJava" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Compiles Java source 'test:java'." />
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="compileTestJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Copies signed libraries to a specified output folder for later packaging." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="copySignedLibs" />
+                <option name="name" value="javadoc" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles a jar archive containing the main classes." />
@@ -390,19 +325,23 @@
                 <option name="name" value="jar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="description" value="Assembles and tests this project." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="javadoc" />
+                <option name="name" value="build" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Do you know who knows?" />
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="knows" />
+                <option name="name" value="buildDependents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Processes resources 'main:resources'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="processResources" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles classes 'main'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
+                <option name="name" value="classes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Processes resources 'test:resources'." />
@@ -410,19 +349,18 @@
                 <option name="name" value="processTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Processes resources 'main:resources'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Combines all classpath resources into a single jar." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
                 <option name="name" value="shadow" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs the unit tests." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="test" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles classes 'test'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Common" />
-                <option name="name" value="testClasses" />
               </ExternalTaskPojo>
             </list>
           </value>
@@ -623,7 +561,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/ClientInstaller" value="1386991513232" />
+        <entry key="$PROJECT_DIR$/Common" value="1387002366093" />
       </map>
     </option>
   </component>
@@ -639,9 +577,7 @@
         <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/data/Pack.java" />
         <option value="$PROJECT_DIR$/Common/src/org/magetech/paq/configuration/Property.java" />
         <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/ForgeInstaller.java" />
-        <option value="$PROJECT_DIR$/CommonInstaller/res/installer.properties" />
         <option value="$PROJECT_DIR$/Common/src/org/magetech/paq/ZipUtils.java" />
-        <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Minecraft.java" />
         <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/GsonUtil.java" />
         <option value="$PROJECT_DIR$/ClientInstaller/build.gradle" />
         <option value="$PROJECT_DIR$/Common/build.gradle" />
@@ -664,13 +600,11 @@
         <option value="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/InstallerWindow.java" />
         <option value="$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/configuration/ConfiguredConfigSystem.java" />
         <option value="$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/configuration/ConfiguredUpdateSystem.java" />
-        <option value="$PROJECT_DIR$/Launcher/res/launcher.properties" />
         <option value="$PROJECT_DIR$/Launcher/build.gradle" />
         <option value="$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/ILaunchSystem.java" />
         <option value="$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/repository/WebRepository.java" />
         <option value="$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/DefaultLaunchSystem.java" />
         <option value="$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/Launcher.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/Common/src/org/magetech/paq/IBackgroundReporter.java" />
         <option value="$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/repository/IRepository.java" />
         <option value="$PROJECT_DIR$/Common/src/org/magetech/paq/LogUtils.java" />
@@ -681,6 +615,10 @@
         <option value="$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/configuration/ConfiguredLaunchSystem.java" />
         <option value="$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/data/Repository.java" />
         <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Installer.java" />
+        <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Minecraft.java" />
+        <option value="$PROJECT_DIR$/Launcher/res/launcher.properties" />
+        <option value="$PROJECT_DIR$/CommonInstaller/res/installer.properties" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -722,7 +660,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -773,80 +711,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PAQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PAQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PAQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -861,20 +725,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PAQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="CommonInstaller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -893,47 +743,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="installer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PAQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PAQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="paq" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -975,7 +785,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1062,12 +872,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
       <module name="" />
       <setting name="path" value="" />
@@ -1075,6 +879,12 @@
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$" />
       <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -1105,19 +915,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1143,6 +940,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1289,38 +1099,42 @@
       <created>1387179392981</created>
       <updated>1387179392981</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Reneabled Minecraft Launcher Profile Updates">
+      <created>1387189849174</created>
+      <updated>1387189849174</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.121875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32981783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20134228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32981783" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32981783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32981783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10989583" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14114584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14114584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32981783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32981783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32981783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1339,7 +1153,8 @@
     <MESSAGE value="Updated readme&#10;" />
     <MESSAGE value="increment&#10;" />
     <MESSAGE value="v.1.1.0&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="v.1.1.0&#10;" />
+    <MESSAGE value="Reneabled Minecraft Launcher Profile Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reneabled Minecraft Launcher Profile Updates" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1350,35 +1165,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ClientInstaller/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="576" selection-end="798" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/Launcher.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.13/b55f31fd670877e459052312a2cc26b0694307b0/snakeyaml-1.13-sources.jar!/org/yaml/snakeyaml/constructor/CustomClassLoaderConstructor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="75" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xeustechnologies/jcl-core/2.5/2d8942a6af403edfabd41d110c8ed231fef6adc7/jcl-core-2.5-sources.jar!/org/xeustechnologies/jcl/JarClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="48" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="5134" />
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xeustechnologies/jcl-core/2.5/2d8942a6af403edfabd41d110c8ed231fef6adc7/jcl-core-2.5-sources.jar!/org/xeustechnologies/jcl/AbstractClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="56" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8840" />
@@ -1386,9 +1172,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/lang/ClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="22" selection-start="6850" selection-end="6850" vertical-scroll-proportion="0.33283803" vertical-offset="1816" max-vertical-offset="37094">
-          <folding />
-        </state>
+        <state line="178" column="22" selection-start="6850" selection-end="6850" vertical-scroll-proportion="0.33283803" vertical-offset="1816" max-vertical-offset="37094" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xeustechnologies/jcl-core/2.5/2d8942a6af403edfabd41d110c8ed231fef6adc7/jcl-core-2.5-sources.jar!/org/xeustechnologies/jcl/context/JclContextLoader.java">
@@ -1408,18 +1192,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/YamlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="2" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/configuration/PropertyLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="16" column="0" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/configuration/ConfiguredData.java">
@@ -1431,30 +1209,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/DirUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/GsonUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/Launch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="40" column="0" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/ContextUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <folding />
-        </state>
+        <state line="33" column="0" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -1466,23 +1236,17 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/javax/swing/WindowConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="44" selection-start="1671" selection-end="1687" vertical-scroll-proportion="0.46953937" vertical-offset="466" max-vertical-offset="1139">
-          <folding />
-        </state>
+        <state line="69" column="44" selection-start="1671" selection-end="1687" vertical-scroll-proportion="0.46953937" vertical-offset="466" max-vertical-offset="1139" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/javax/swing/BoxLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="34" selection-start="5598" selection-end="5604" vertical-scroll-proportion="0.18587361" vertical-offset="1907" max-vertical-offset="8738">
-          <folding />
-        </state>
+        <state line="147" column="34" selection-start="5598" selection-end="5604" vertical-scroll-proportion="0.18587361" vertical-offset="1907" max-vertical-offset="8738" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/ResourceUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="60" selection-start="256" selection-end="256" vertical-scroll-proportion="0.18959108" vertical-offset="0" max-vertical-offset="807">
-          <folding />
-        </state>
+        <state line="9" column="60" selection-start="256" selection-end="256" vertical-scroll-proportion="0.18959108" vertical-offset="0" max-vertical-offset="807" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientInstaller/res/PAQ_INSTALLER_BG_1.png">
@@ -1554,45 +1318,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/DialogInstallAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="99" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="9" column="99" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/IInstallAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="40" selection-start="360" selection-end="360" vertical-scroll-proportion="0.20208023" vertical-offset="0" max-vertical-offset="673">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/InstallerWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="1520" max-vertical-offset="3570">
-          <folding>
-            <element signature="e#2775#2781#0" expanded="false" />
-            <element signature="e#2846#2859#0" expanded="false" />
-            <element signature="e#2915#2924#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="13" column="40" selection-start="360" selection-end="360" vertical-scroll-proportion="0.20208023" vertical-offset="0" max-vertical-offset="673" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/configuration/ConfiguredConfigSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="47" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.7578009" vertical-offset="0" max-vertical-offset="673">
-          <folding />
-        </state>
+        <state line="41" column="47" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.7578009" vertical-offset="0" max-vertical-offset="673" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/configuration/ConfiguredUpdateSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="1" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.58098066" vertical-offset="0" max-vertical-offset="673">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="33" column="1" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.58098066" vertical-offset="0" max-vertical-offset="673" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/repository/WebRepository.java">
@@ -1607,9 +1348,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/ILaunchSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="179" selection-start="656" selection-end="656" vertical-scroll-proportion="0.25260028" vertical-offset="0" max-vertical-offset="673">
-          <folding />
-        </state>
+        <state line="16" column="179" selection-start="656" selection-end="656" vertical-scroll-proportion="0.25260028" vertical-offset="0" max-vertical-offset="673" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/lang/String.java">
@@ -1621,9 +1360,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/util/jar/Attributes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="465" column="31" selection-start="15017" selection-end="15017" vertical-scroll-proportion="0.48079306" vertical-offset="6939" max-vertical-offset="10795">
-          <folding />
-        </state>
+        <state line="465" column="31" selection-start="15017" selection-end="15017" vertical-scroll-proportion="0.48079306" vertical-offset="6939" max-vertical-offset="10795" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/Launcher.java">
@@ -1636,13 +1373,6 @@
     <entry file="file://$PROJECT_DIR$/Launcher/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="33" selection-start="852" selection-end="868" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="514" selection-end="514" vertical-scroll-proportion="0.6820208" vertical-offset="0" max-vertical-offset="1054">
           <folding />
         </state>
       </provider>
@@ -1665,47 +1395,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/LogUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="153" selection-end="153" vertical-scroll-proportion="0.10104012" vertical-offset="0" max-vertical-offset="673">
-          <folding />
-        </state>
+        <state line="7" column="0" selection-start="153" selection-end="153" vertical-scroll-proportion="0.10104012" vertical-offset="0" max-vertical-offset="673" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/repository/IRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.075780086" vertical-offset="0" max-vertical-offset="673">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/IBackgroundReporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="9" selection-start="184" selection-end="184" vertical-scroll-proportion="0.22734027" vertical-offset="0" max-vertical-offset="673">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/res/launcher.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.075780086" vertical-offset="0" max-vertical-offset="673" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/IUpdateSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/ClientInstaller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1719,9 +1420,7 @@
     <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/configuration/ConfiguredLaunchSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1732,9 +1431,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Minecraft.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="75" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/configuration/Property.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.12630014" vertical-offset="0" max-vertical-offset="673">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launcher/res/data.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="673">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/IBackgroundReporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="9" selection-start="167" selection-end="167" vertical-scroll-proportion="0.1768202" vertical-offset="0" max-vertical-offset="673">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Installer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="12" selection-start="7799" selection-end="7799" vertical-scroll-proportion="0.79791975" vertical-offset="2880" max-vertical-offset="3621">
+        <state line="96" column="90" selection-start="3057" selection-end="3057" vertical-scroll-proportion="0.5304606" vertical-offset="969" max-vertical-offset="3621">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CommonInstaller/res/installer.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="55" selection-start="118" selection-end="118" vertical-scroll-proportion="0.02526003" vertical-offset="0" max-vertical-offset="673">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CommonInstaller/res/data.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="673">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/InstallerWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="35" selection-start="5458" selection-end="5458" vertical-scroll-proportion="0.5096582" vertical-offset="1782" max-vertical-offset="3570">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/ClientInstaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="26" selection-start="574" selection-end="574" vertical-scroll-proportion="0.25260028" vertical-offset="0" max-vertical-offset="673">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="31" selection-start="728" selection-end="728" vertical-scroll-proportion="0.8989599" vertical-offset="75" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launcher/res/launcher.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.05052006" vertical-offset="0" max-vertical-offset="673">
           <folding />
         </state>
       </provider>

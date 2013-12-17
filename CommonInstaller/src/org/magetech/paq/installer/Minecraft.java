@@ -7,15 +7,9 @@ import com.google.gson.stream.JsonWriter;
 import com.sun.jna.Platform;
 import org.apache.commons.io.FilenameUtils;
 import org.magetech.paq.DirUtils;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.*;
-import java.util.List;
-import java.util.Map;
 
-/**
- * Created by Aleksander on 14.12.13.
- */
 public class Minecraft {
     public static final String MINECRAFT_LAUNCHER_PROFILES = "launcher_profiles.json";
 
