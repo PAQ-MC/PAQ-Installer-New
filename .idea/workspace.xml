@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1db3bb88-641d-469c-ba41-dc145d4e67a0" name="Default" comment="Working version">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientInstaller/ClientInstaller.iml" afterPath="$PROJECT_DIR$/ClientInstaller/ClientInstaller.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Common/Common.iml" afterPath="$PROJECT_DIR$/Common/Common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CommonInstaller/CommonInstaller.iml" afterPath="$PROJECT_DIR$/CommonInstaller/CommonInstaller.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Launcher/Launcher.iml" afterPath="$PROJECT_DIR$/Launcher/Launcher.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PAQ.iml" afterPath="$PROJECT_DIR$/PAQ.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Common/src/org/magetech/paq/ResourceUtils.java" afterPath="$PROJECT_DIR$/Common/src/org/magetech/paq/ResourceUtils.java" />
     </list>
     <ignored path="PAQ.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,7 +79,7 @@
       <file leaf-file-name="InstallerWindow.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/InstallerWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="873" selection-end="873" vertical-scroll-proportion="0.34256926" vertical-offset="0" max-vertical-offset="3366">
+            <state line="214" column="39" selection-start="8656" selection-end="8656" vertical-scroll-proportion="0.5075567" vertical-offset="2572" max-vertical-offset="3366">
               <folding />
             </state>
           </provider>
@@ -604,7 +599,6 @@
         <option value="$PROJECT_DIR$/Common/src/org/magetech/paq/ContextUtils.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/InstallerPanel.java" />
-        <option value="$PROJECT_DIR$/Common/src/org/magetech/paq/ResourceUtils.java" />
         <option value="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/InstallerWindow.form" />
         <option value="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/Images.java" />
         <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/data/ModRepository.java" />
@@ -634,6 +628,7 @@
         <option value="$PROJECT_DIR$/CommonInstaller/res/installer.properties" />
         <option value="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/InstallerWindow.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/Common/src/org/magetech/paq/ResourceUtils.java" />
       </list>
     </option>
   </component>
@@ -1218,11 +1213,6 @@
         <state line="147" column="34" selection-start="5598" selection-end="5604" vertical-scroll-proportion="0.18587361" vertical-offset="1907" max-vertical-offset="8738" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/ResourceUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="60" selection-start="256" selection-end="256" vertical-scroll-proportion="0.18959108" vertical-offset="0" max-vertical-offset="807" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ClientInstaller/res/PAQ_INSTALLER_BG_1.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1408,9 +1398,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/ResourceUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="18" selection-start="388" selection-end="388" vertical-scroll-proportion="0.2527881" vertical-offset="0" max-vertical-offset="807">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/InstallerWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="873" selection-end="873" vertical-scroll-proportion="0.34256926" vertical-offset="0" max-vertical-offset="3366">
+        <state line="214" column="39" selection-start="8656" selection-end="8656" vertical-scroll-proportion="0.5075567" vertical-offset="2572" max-vertical-offset="3366">
           <folding />
         </state>
       </provider>

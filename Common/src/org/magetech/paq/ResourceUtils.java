@@ -7,6 +7,9 @@ import java.io.InputStream;
  */
 public class ResourceUtils {
     public static InputStream getResourceAsStream(String name) {
-        return ContextUtils.get().getResourceAsStream(name);
+        InputStream is = ContextUtils.get().getResourceAsStream(name);
+        if(is == null)
+            throw new IllegalStateException("resource " + name + " not found");
+        return is;
     }
 }
