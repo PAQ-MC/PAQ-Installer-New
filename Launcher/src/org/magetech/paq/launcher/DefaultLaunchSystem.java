@@ -1,6 +1,7 @@
 package org.magetech.paq.launcher;
 
 import com.github.zafarkhaja.semver.Version;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.magetech.paq.Assert;
 import org.magetech.paq.IBackgroundReporter;
@@ -72,6 +73,18 @@ public class DefaultLaunchSystem implements ILaunchSystem {
         pack.copyTo(version, file);
 
         save();
+    }
+
+    @Override
+    public void deleteAll(String id) throws IOException {
+        Repository.RepositoryPackage repositoryPackage = find(id);
+        if(repositoryPackage == null) {
+            throw new IllegalStateException("package not found");
+        }
+
+        repositoryPackage.getVersions().clear();
+        File file = new File(getAppPath(id, Version.valueOf("0.0.0")));
+        FileUtils.cleanDirectory(file.getParentFile());
     }
 
     private void save() throws IOException {

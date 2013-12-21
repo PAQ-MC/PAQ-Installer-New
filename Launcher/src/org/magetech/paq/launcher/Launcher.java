@@ -107,6 +107,7 @@ public class Launcher {
         Version latestVersion = pack.getLastVersion();
 
         if(!launchSystem.hasInstalled(appId, latestVersion)) {
+            launchSystem.deleteAll(appId);
             launchSystem.installLatest(pack);
         }
 

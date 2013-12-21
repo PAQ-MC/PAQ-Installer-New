@@ -12,7 +12,7 @@ import java.util.Collections;
  * Created by Aleksander on 16.12.13.
  */
 public class Images {
-    public static final String BACKGROUND = "PAQ_INSTALLER_BG_1.png";
+    public static final String BACKGROUND = "PAQ_INSTALLER_BG_2.png";
     public static final String INSTALL = "PAQ_INSTALL_BUTTON_1.png";
     public static final String INSTALL_HOVER = "PAQ_INSTALL_BUTTON_1_HOVER.png";
     public static final String INSTALL_PRESS = "PAQ_INSTALL_BUTTON_1_PRESS.png";
