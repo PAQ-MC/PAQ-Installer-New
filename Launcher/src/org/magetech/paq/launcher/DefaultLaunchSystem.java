@@ -79,7 +79,7 @@ public class DefaultLaunchSystem implements ILaunchSystem {
     public void deleteAll(String id) throws IOException {
         Repository.RepositoryPackage repositoryPackage = find(id);
         if(repositoryPackage == null) {
-            throw new IllegalStateException("package not found");
+            return;
         }
 
         repositoryPackage.getVersions().clear();
