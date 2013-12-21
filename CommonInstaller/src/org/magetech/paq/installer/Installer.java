@@ -214,6 +214,9 @@ public class Installer {
         String modsDir = FilenameUtils.concat(instDir, "mods");
         String configDir = FilenameUtils.concat(instDir, "config");
 
+        FileUtils.cleanDirectory(new File(configDir));
+        FileUtils.cleanDirectory(new File(modsDir));
+
         ZipUtils.unzip(configFile, configDir);
 
         for(ModRepository.ModConfig mod : mods) {
