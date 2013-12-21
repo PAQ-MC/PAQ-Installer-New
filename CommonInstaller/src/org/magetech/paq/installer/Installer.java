@@ -13,6 +13,7 @@ import org.magetech.paq.installer.data.ModRepository;
 import org.magetech.paq.installer.data.Pack;
 import org.magetech.paq.installer.data.PackConfig;
 import org.magetech.paq.installer.data.PackRepository;
+import org.pmw.tinylog.Logger;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -115,8 +116,10 @@ public class Installer {
     private void download(ModRepository.ModConfig mod) throws IOException, InvocationTargetException, InterruptedException {
         String file = getFile(mod);
 
-        if(new File(file).exists())
+        if(new File(file).exists()) {
+            Logger.info(mod.getId() + "-" + mod.getVersion() + " skipped, because it's already downloaded");
             return; // already downloaded
+        }
 
         InputStream is;
         if(mod.getBrowser()) {
@@ -194,6 +197,8 @@ public class Installer {
         List<ModRepository.ModConfig> mods = new ArrayList<ModRepository.ModConfig>();
         for(Pack.ModConfig mod : packConfig.getMods()) {
             ModRepository.ModConfig m = modRepo.find(mod.getId(), mod.getVersion());
+            if(m == null)
+                throw new IllegalStateException("mod " + mod.getId() + "@" + mod.getId() + " does not exist in mods repository.");
             if(m.getSide().equals(ModRepository.Side.Client) && isServer) continue;
             if(m.getSide().equals(ModRepository.Side.Server) && !isServer) continue;
 
