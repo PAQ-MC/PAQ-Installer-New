@@ -1,6 +1,7 @@
 package org.magetech.paq.launcher;
 
 import com.github.zafarkhaja.semver.Version;
+
 import org.magetech.paq.ContextUtils;
 import org.magetech.paq.DialogBackgroundReporter;
 import org.magetech.paq.IBackgroundReporter;
@@ -12,10 +13,15 @@ import org.magetech.paq.launcher.repository.IPackage;
 import org.pmw.tinylog.Logger;
 
 import java.io.Closeable;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.Map;
 import java.util.jar.Attributes;
@@ -27,7 +33,15 @@ import java.util.jar.Manifest;
 public class Launcher {
     public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         LogUtils.ensureConfigured();
-
+        
+        //temp patch code to create log file
+        DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
+		Date date = new Date();
+        PrintWriter out = new PrintWriter(new FileWriter("log.txt"),true);
+        out.print(dateFormat.format(date));
+        out.close();
+        
+        
         IBackgroundReporter reporter;
 
         if(args.length == 0) {
