@@ -126,7 +126,11 @@ public class Launcher {
         }
 
         reporter.end();
-        launchSystem.launch(appId, latestVersion, args);
+        try {
+            launchSystem.launch(appId, latestVersion, args);
+        } catch (Exception ex) {
+            Logger.error(ex, "Error in launced application");
+        }
     }
 
     private static String get(Attributes attributes, String wanted) {
