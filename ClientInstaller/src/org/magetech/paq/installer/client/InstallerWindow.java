@@ -20,14 +20,23 @@ public class InstallerWindow extends JDialog {
     private final int buttonY = 380;
     private final int buttonScreenOffset = 140;
 
+    private final String _mod;
+    private final String _version;
+    private final boolean _preview;
+
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
 
     private boolean _install;
 
-    public InstallerWindow() throws IOException {
+    public InstallerWindow(String mod, String version, boolean preview) throws IOException {
         super(null, ModalityType.TOOLKIT_MODAL);
+
+
+        _mod = mod;
+        _version = version;
+        _preview = preview;
 
         setupComponents();
         setIconImages(Images.getIcons());
@@ -146,7 +155,7 @@ public class InstallerWindow extends JDialog {
             @Override
             public void run() {
                 try {
-                    installer.install("PAQ", false);
+                    installer.install(_mod, false, _version, _preview);
                     monitor.close();
                     JOptionPane.showMessageDialog(InstallerWindow.this, "Installation completed successfully", "Completed", JOptionPane.INFORMATION_MESSAGE);
                 } catch (IOException | ClassNotFoundException | NoSuchMethodException | InvocationTargetException | IllegalAccessException | InterruptedException e) {
@@ -158,12 +167,12 @@ public class InstallerWindow extends JDialog {
         }.start();
     }
 
-    public static void run() throws IOException {
+    public static void run(final String mod, final String version, final boolean preview) throws IOException {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
                 try {
-                    InstallerWindow dialog = new InstallerWindow();
+                    InstallerWindow dialog = new InstallerWindow(mod, version, preview);
                     dialog.pack();
                     dialog.setLocationRelativeTo(null);
                     dialog.setVisible(true);

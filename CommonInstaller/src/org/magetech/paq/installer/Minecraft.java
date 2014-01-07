@@ -54,6 +54,7 @@ public class Minecraft {
             profile = new JsonObject();
             profiles.add(packName, profile);
             profile.addProperty("name", packName);
+            profile.addProperty("javaArgs", "-Xmx1G -XX:PermSize\u003d1024m");
         }
 
         profile.addProperty("lastVersionId", mcVersionId);

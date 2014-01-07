@@ -9,7 +9,6 @@ import org.yaml.snakeyaml.nodes.ScalarNode;
 
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -74,6 +73,12 @@ public class ModRepository {
         Server
     }
 
+    public static enum ZipMode {
+        None,
+        Unpack,
+        UnpackToDir
+    }
+
     public static class ModConfig {
         private String _id;
         private Version _version;
@@ -81,6 +86,7 @@ public class ModRepository {
         private boolean _browser;
         private String _fileName;
         private Side _side;
+        private ZipMode _zipMode;
 
         public String getId() {
             return _id;
@@ -135,5 +141,14 @@ public class ModRepository {
         public void setSide(Side value) {
             _side = value;
         }
+
+        public ZipMode getZipMode() {
+            if(_zipMode == null)
+                return ZipMode.None;
+
+            return _zipMode;
+        }
+
+        public void setZipMode(ZipMode value) { _zipMode = value; }
     }
 }

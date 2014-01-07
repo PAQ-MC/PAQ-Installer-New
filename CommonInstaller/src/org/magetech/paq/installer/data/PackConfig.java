@@ -8,7 +8,6 @@ import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.nodes.ScalarNode;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -65,6 +64,18 @@ public class PackConfig {
     public static PackConfig load(InputStream in) {
         Yaml parser = getYaml();
         return load(parser.load(in));
+    }
+
+    public Version getVersion(String version) {
+        Version wanted = Version.valueOf(version);
+
+        for(int i = _versions.size() - 1; i >= 0; i--) {
+            Version v = _versions.get(i);
+            if(v.equals(wanted))
+                return v;
+        }
+
+        throw new IllegalArgumentException("Version not found");
     }
 
     public Version getLatestVersion(boolean includePreRelease) {

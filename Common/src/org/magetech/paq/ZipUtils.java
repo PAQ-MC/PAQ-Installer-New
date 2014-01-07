@@ -1,7 +1,5 @@
 package org.magetech.paq;
 
-import org.apache.commons.io.*;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,9 +12,15 @@ import java.util.zip.ZipFile;
  */
 public class ZipUtils {
     public static void unzip(String zipFile, String unpackDir) throws IOException {
+        unzip(zipFile, unpackDir, true);
+    }
+
+    public static void unzip(String zipFile, String unpackDir, boolean cleanDir) throws IOException {
         File dir = new File(unpackDir);
-        if(dir.exists() && dir.isDirectory())
-            org.apache.commons.io.FileUtils.cleanDirectory(dir);
+        if(dir.exists() && dir.isDirectory()) {
+            if(cleanDir)
+                org.apache.commons.io.FileUtils.cleanDirectory(dir);
+        }
         else if(dir.exists()) {
             dir.delete();
             dir.mkdirs();

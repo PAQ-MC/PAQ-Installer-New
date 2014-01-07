@@ -6,11 +6,29 @@
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/Common" />
         <option name="gradleHome" value="$USER_HOME$/Downloads/gradle-1.9-all/gradle-1.9" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ClientInstaller" />
+            <option value="$PROJECT_DIR$/Common" />
+            <option value="$PROJECT_DIR$/CommonInstaller" />
+            <option value="$PROJECT_DIR$/Launcher" />
+          </set>
+        </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/CommonInstaller" />
         <option name="gradleHome" value="$USER_HOME$/Downloads/gradle-1.9-all/gradle-1.9" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ClientInstaller" />
+            <option value="$PROJECT_DIR$/Common" />
+            <option value="$PROJECT_DIR$/CommonInstaller" />
+            <option value="$PROJECT_DIR$/Launcher" />
+          </set>
+        </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />

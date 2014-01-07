@@ -144,7 +144,22 @@ public class Installer {
         FileUtils.copyFile(new File(file), new File(wantedFile));
     }
 
-    public void install(String pack, boolean isServer) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InterruptedException {
+    private void unpack(ModRepository.ModConfig mod, String directory) throws IOException {
+        String file = getFile(mod);
+        String fileName = mod.getFileName();
+
+        String unpackDir;
+        if(mod.getZipMode() == ModRepository.ZipMode.Unpack) {
+            unpackDir = directory;
+        } else {
+            unpackDir = FilenameUtils.concat(directory, FilenameUtils.removeExtension(fileName));
+        }
+
+        new File(unpackDir).mkdirs();
+        ZipUtils.unzip(file, unpackDir, false);
+    }
+
+    public void install(String pack, boolean isServer, String version, boolean preview) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InterruptedException {
         updateRepos();
         PackRepository packsRepo;
         ModRepository modRepo;
@@ -170,7 +185,11 @@ public class Installer {
 
         Version latest;
         try (InputStream is = new FileInputStream(packFile)) {
-            latest = PackConfig.load(is).getLatestVersion(false);
+            PackConfig packConfig = PackConfig.load(is);
+            if(version != null)
+                latest = packConfig.getVersion(version);
+            else
+                latest = packConfig.getLatestVersion(preview);
         }
 
         String specificPackFile = FilenameUtils.concat(packDir, pack + "-" + latest.toString() + ".yml");
@@ -227,7 +246,10 @@ public class Installer {
 
         for(ModRepository.ModConfig mod : mods) {
             // TODO: "Install" mod
-            copy(mod, modsDir);
+            if(mod.getZipMode() == ModRepository.ZipMode.None)
+                copy(mod, modsDir);
+            else
+                unpack(mod, modsDir);
         }
 
         if(!isServer) {
