@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1db3bb88-641d-469c-ba41-dc145d4e67a0" name="Default" comment="Working version">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientInstaller/ClientInstaller.iml" afterPath="$PROJECT_DIR$/ClientInstaller/ClientInstaller.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/ClientInstaller.java" afterPath="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/ClientInstaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Common/Common.iml" afterPath="$PROJECT_DIR$/Common/Common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CommonInstaller/CommonInstaller.iml" afterPath="$PROJECT_DIR$/CommonInstaller/CommonInstaller.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Installer.java" afterPath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Installer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/InstallerWindow.java" afterPath="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/InstallerWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Launcher/Launcher.iml" afterPath="$PROJECT_DIR$/Launcher/Launcher.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Minecraft.java" afterPath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Minecraft.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/data/ModRepository.java" afterPath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/data/ModRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PAQ.iml" afterPath="$PROJECT_DIR$/PAQ.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/data/PackConfig.java" afterPath="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/data/PackConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Common/src/org/magetech/paq/ZipUtils.java" afterPath="$PROJECT_DIR$/Common/src/org/magetech/paq/ZipUtils.java" />
+    <list default="true" id="1db3bb88-641d-469c-ba41-dc145d4e67a0" name="Default" comment="Unzip support">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PAQ.iws" />
@@ -126,8 +113,10 @@
       <file leaf-file-name="ZipUtils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/ZipUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="918">
-              <folding />
+            <state line="29" column="0" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="918">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,16 +124,18 @@
       <file leaf-file-name="PackConfig.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/data/PackConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="2582" selection-end="2582" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1343">
-              <folding />
+            <state line="88" column="0" selection-start="2554" selection-end="2554" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1343">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Launcher.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Launcher.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="58" selection-start="4417" selection-end="4421" vertical-scroll-proportion="2.1549296" vertical-offset="0" max-vertical-offset="2635">
+            <state line="52" column="50" selection-start="1806" selection-end="1806" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="2635">
               <folding />
             </state>
           </provider>
@@ -163,7 +154,13 @@
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/4.5/3cf4c3c1a6f565419bfd53a0e564d6fb128deeea/jopt-simple-4.5-sources.jar!/joptsimple/OptionSet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="75" column="0" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.0" vertical-offset="479" max-vertical-offset="4709">
-              <folding />
+              <folding>
+                <element signature="e#0#12107#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#11102#11139#0" expanded="false" />
+                <element signature="e#11261#11298#0" expanded="false" />
+                <element signature="e#11610#11647#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,19 +183,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Minecraft.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Minecraft.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="58" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1394">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+            <state line="2" column="22" selection-start="55" selection-end="55" vertical-scroll-proportion="0.04213135" vertical-offset="0" max-vertical-offset="1088">
               <folding />
             </state>
           </provider>
@@ -742,7 +730,6 @@
         <option value="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/Images.java" />
         <option value="$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/DefaultLaunchSystem.java" />
         <option value="$PROJECT_DIR$/Common/src/org/magetech/paq/LogUtils.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Minecraft.java" />
         <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/data/ModRepository.java" />
         <option value="$PROJECT_DIR$/ClientInstaller/src/org/magetech/paq/installer/client/ClientInstaller.java" />
@@ -750,6 +737,7 @@
         <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/data/PackConfig.java" />
         <option value="$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/Installer.java" />
         <option value="$PROJECT_DIR$/Common/src/org/magetech/paq/ZipUtils.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -1429,7 +1417,11 @@
       <created>1387248595390</created>
       <updated>1387248595390</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Unzip support">
+      <created>1389123100114</created>
+      <updated>1389123100114</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1481,7 +1473,8 @@
     <MESSAGE value="v.1.1.0&#10;" />
     <MESSAGE value="Reneabled Minecraft Launcher Profile Updates" />
     <MESSAGE value="Working version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working version" />
+    <MESSAGE value="Unzip support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unzip support" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1582,11 +1575,6 @@
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/util/jar/Attributes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="465" column="31" selection-start="15017" selection-end="15017" vertical-scroll-proportion="0.48079306" vertical-offset="6939" max-vertical-offset="10795" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="33" selection-start="852" selection-end="868" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/DialogBackgroundReporter.java">
@@ -1714,7 +1702,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="152" column="66" selection-start="3646" selection-end="3646" vertical-scroll-proportion="0.94947994" vertical-offset="1350" max-vertical-offset="2142">
           <folding>
-            <element signature="e#3626#3627#0" expanded="true" />
+            <element signature="e#3596#3597#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1736,7 +1724,13 @@
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/4.5/3cf4c3c1a6f565419bfd53a0e564d6fb128deeea/jopt-simple-4.5-sources.jar!/joptsimple/OptionSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="0" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.0" vertical-offset="479" max-vertical-offset="4709">
-          <folding />
+          <folding>
+            <element signature="e#0#12107#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#11102#11139#0" expanded="false" />
+            <element signature="e#11261#11298#0" expanded="false" />
+            <element signature="e#11610#11647#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1756,22 +1750,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CommonInstaller/src/org/magetech/paq/installer/data/PackConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="2582" selection-end="2582" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
-          <folding />
+        <state line="88" column="0" selection-start="2554" selection-end="2554" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1343">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/org/magetech/paq/ZipUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="918">
-          <folding />
+        <state line="29" column="0" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="918">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1786,7 +1777,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/src/org/magetech/paq/launcher/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="58" selection-start="4417" selection-end="4421" vertical-scroll-proportion="2.1549296" vertical-offset="0" max-vertical-offset="2635">
+        <state line="52" column="50" selection-start="1806" selection-end="1806" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="2635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launcher/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="4" selection-start="179" selection-end="193" vertical-scroll-proportion="0.29491946" vertical-offset="0" max-vertical-offset="807">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="22" selection-start="55" selection-end="55" vertical-scroll-proportion="0.04213135" vertical-offset="0" max-vertical-offset="1088">
           <folding />
         </state>
       </provider>
