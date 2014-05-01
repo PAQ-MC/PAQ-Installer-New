@@ -9,3 +9,8 @@ Building
 To build the installer, simply run `gradlew build` from the rood directory.
 The jar files will be placed in `Launcher/build/libs`, and
 `ClientInstaller/build/libs`.
+
+License
+========
+
+Do what you will, all we ask is you give credit where credit is due. 
