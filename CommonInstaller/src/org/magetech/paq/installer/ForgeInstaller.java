@@ -7,11 +7,9 @@ import org.magetech.paq.UrlUtils;
 import org.magetech.paq.configuration.Property;
 import org.magetech.paq.configuration.PropertyLoader;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 
@@ -45,22 +43,7 @@ public class ForgeInstaller {
         else
             args = new String[0];
 
-        //Launch.jar(tmp, args);
-        
-        Process p = Runtime.getRuntime().exec("java -jar " + "\"" + tmp.getAbsolutePath() + "\" ");
-		BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
-		
-		String line=null;
-		
-		while((line=input.readLine()) !=null ){
-			System.out.println(line);
-		}
-	
-	p.waitFor();
-	if (p.exitValue() != 0) {
-	}
-        
-        
+        Launch.jar(tmp, args);
         if(!isServer) {
             forgeVersionId = Minecraft.findForgeProfile();
         }
