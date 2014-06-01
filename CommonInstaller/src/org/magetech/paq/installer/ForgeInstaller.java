@@ -46,7 +46,7 @@ public class ForgeInstaller {
             args = new String[0];
 
         //Launch.jar(tmp, args);
-        
+        try { 
         Process p = Runtime.getRuntime().exec("java -jar " + "\"" + tmp.getAbsolutePath() + "\" ");
 		BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		
@@ -58,7 +58,11 @@ public class ForgeInstaller {
 	
 	p.waitFor();
 	if (p.exitValue() != 0) {
+		System.out.println("forge error" + p.exitValue() );
 	}
+        } catch (IOException e) {  
+            e.printStackTrace();  
+        }  
         
         
         if(!isServer) {
